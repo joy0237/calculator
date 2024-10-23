@@ -1,0 +1,67 @@
+/* Extend the CSS to accommodate scientific functions */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+    font-family: Arial, sans-serif;
+}
+
+.calculator {
+    width: 400px; /* Make space for more buttons */
+    background-color: grey;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+#display {
+    width: 100%;
+    height: 60px;
+    background-color: #333;
+    color: white;
+    font-size: 2rem;
+    text-align: right;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+}
+
+.btn {
+    background-color: grey;
+    border: none;
+    font-size: 1.2rem;
+    padding: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ddd;
+}
+
+.zero-btn {
+    grid-column: span 2;
+}
+
+.buttons .btn:nth-child(4n) {
+    background-color: #f0a500;
+    color: white;
+}
+
+.buttons .btn:nth-child(4n):hover {
+    background-color: #d18c00;
+}
